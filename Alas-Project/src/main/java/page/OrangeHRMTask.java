@@ -35,6 +35,8 @@ public By candidateCheckBox = By.cssSelector("label[for='checkbox_154_']");
 public By threeDots = By.className("material-icons icons-color handCurser");
 public By deleteCandidate = By.id("deleteItemBtn");
 public By yesDelete = By.id("candidate-delete-button"); //refresh stranicu posle ovoga
+    public By optionArrow = By.cssSelector("span[id='account-job'] i[class='material-icons']");
+    public By logOutButton = By.id("logoutLink");
 
     public OrangeHRMTask(WebDriver driver){
         this.driver=driver;
@@ -144,5 +146,13 @@ public By yesDelete = By.id("candidate-delete-button"); //refresh stranicu posle
     public void clickYesDelete(){
         driver.findElement(yesDelete).click();
         driver.navigate().refresh();
+    }
+
+    public void findLogout(){
+        driver.findElement(optionArrow).click();
+    }
+
+    public void clickLogout(){
+        driver.findElement(logOutButton).click();
     }
 }

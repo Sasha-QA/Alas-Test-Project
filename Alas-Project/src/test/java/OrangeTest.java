@@ -60,5 +60,13 @@ public class OrangeTest extends BaseTest{
        assertEquals(actual, expected);
    }
 
+   @Test
+    public void logOut(){
+       OrangeHRMTask orange = new OrangeHRMTask(createWebDriver());
+       orange.goToWebpage();
+       orange.clickLoginButton();
+       orange.findLogout();
+       orange.clickLogout();
+   }
 
 }
